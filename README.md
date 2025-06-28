@@ -1,4 +1,4 @@
-# The Complete AutoGen v0.5 Blueprint: Developer's Guide to Building Multi-Agent AI Systems
+# The Complete AutoGen v0.6.1 Blueprint: Developer's Guide to Building Multi-Agent AI Systems
 
 <div align="center">
 
@@ -16,11 +16,11 @@
 
 ## 🚀 Overview
 
-This repository contains the complete guide to building multi-agent AI systems using Microsoft's AutoGen framework version 0.5. The book covers the entire framework from basic concepts to advanced production deployments, with a focus on practical implementation and best practices.
+This repository contains the complete guide to building multi-agent AI systems using Microsoft's AutoGen framework version 0.6.1. The book covers the entire framework from basic concepts to advanced production deployments, with a focus on practical implementation and best practices.
 
 ## 🏗️ System Architecture
 
-AutoGen v0.5 introduces a sophisticated, modular architecture designed for scalable multi-agent systems:
+AutoGen v0.6.1 introduces a sophisticated, modular architecture designed for scalable multi-agent systems:
 
 <div align="center">
 
