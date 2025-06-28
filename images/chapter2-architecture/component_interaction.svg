@@ -1,144 +1,239 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="800" height="800" fill="white"/>
-  
-  <!-- Drop shadows for components -->
+<svg width="1000" height="900" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="3" dy="3" stdDeviation="5" flood-opacity="0.2"/>
+    <!-- Gradients -->
+    <linearGradient id="backgroundGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="chatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="extensionsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="studioGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Enhanced Shadows -->
+    <filter id="modernShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="4" result="offset"/>
+      <feFlood flood-color="#000000" flood-opacity="0.1"/>
+      <feComposite in2="offset" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
+    
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Arrow markers -->
+    <marker id="arrowEnd" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L2,10 L8,6 z" fill="#4b5563" stroke="#4b5563" stroke-width="1"/>
+    </marker>
+    
+    <marker id="arrowStart" markerWidth="12" markerHeight="12" refX="1" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M10,2 L10,10 L4,6 z" fill="#4b5563" stroke="#4b5563" stroke-width="1"/>
+    </marker>
   </defs>
   
-  <!-- Title -->
-  <text x="400" y="60" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#212121">AutoGen Component Interaction</text>
+  <!-- Background -->
+  <rect width="1000" height="900" fill="url(#backgroundGrad)"/>
+  
+  <!-- Subtle grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" stroke-width="1" opacity="0.3"/>
+  </pattern>
+  <rect width="1000" height="900" fill="url(#grid)"/>
+  
+  <!-- Title Section -->
+  <rect x="50" y="30" width="900" height="80" rx="16" fill="white" filter="url(#modernShadow)" opacity="0.9"/>
+  <text x="500" y="65" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="700" fill="#1f2937">AutoGen</text>
+  <text x="500" y="90" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="400" fill="#6b7280">Component Architecture &amp; Data Flow</text>
   
   <!-- Core Component (Center) -->
-  <g id="core-component" filter="url(#shadow)">
-    <rect x="300" y="300" width="200" height="200" rx="10" ry="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <g id="core-component" filter="url(#modernShadow)">
+    <rect x="350" y="350" width="300" height="200" rx="20" fill="white" stroke="url(#coreGrad)" stroke-width="3"/>
+    <rect x="360" y="360" width="280" height="40" rx="12" fill="url(#coreGrad)"/>
     
-    <!-- Icon: Gears -->
-    <circle cx="400" cy="330" r="20" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
-    <path d="M400 320 L400 340 M390 330 L410 330" stroke="#1976d2" stroke-width="2"/>
-    <path d="M393 323 L407 337 M393 337 L407 323" stroke="#1976d2" stroke-width="2"/>
+    <!-- Enhanced Core Icon -->
+    <g transform="translate(420, 375)">
+      <circle cx="0" cy="0" r="12" fill="white" opacity="0.9"/>
+      <path d="M-8,-8 L8,8 M-8,8 L8,-8" stroke="url(#coreGrad)" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="6" fill="none" stroke="url(#coreGrad)" stroke-width="2"/>
+    </g>
     
-    <text x="400" y="370" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#1976d2">Core</text>
+    <text x="500" y="385" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="600" fill="white">Core Engine</text>
     
-    <!-- Subcomponents -->
-    <rect x="320" y="390" width="160" height="90" rx="5" ry="5" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
-    <text x="400" y="410" text-anchor="middle" font-family="Arial" font-size="12" fill="#1976d2">Event System</text>
-    <line x1="340" y1="420" x2="460" y2="420" stroke="#1976d2" stroke-width="1" stroke-opacity="0.5"/>
-    <text x="400" y="435" text-anchor="middle" font-family="Arial" font-size="12" fill="#1976d2">Message Handling</text>
-    <line x1="340" y1="445" x2="460" y2="445" stroke="#1976d2" stroke-width="1" stroke-opacity="0.5"/>
-    <text x="400" y="460" text-anchor="middle" font-family="Arial" font-size="12" fill="#1976d2">Agent Registry</text>
+    <!-- Subcomponents with modern styling -->
+    <rect x="370" y="420" width="260" height="110" rx="12" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+    
+    <circle cx="390" cy="445" r="4" fill="url(#coreGrad)"/>
+    <text x="405" y="450" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Event System</text>
+    
+    <circle cx="390" cy="470" r="4" fill="url(#coreGrad)"/>
+    <text x="405" y="475" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Message Router</text>
+    
+    <circle cx="390" cy="495" r="4" fill="url(#coreGrad)"/>
+    <text x="405" y="500" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Agent Registry</text>
+    
+    <circle cx="390" cy="520" r="4" fill="url(#coreGrad)"/>
+    <text x="405" y="525" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">State Management</text>
   </g>
   
   <!-- AgentChat Component (Top) -->
-  <g id="agentchat-component" filter="url(#shadow)">
-    <rect x="300" y="100" width="200" height="200" rx="10" ry="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
+  <g id="agentchat-component" filter="url(#modernShadow)">
+    <rect x="350" y="150" width="300" height="180" rx="20" fill="white" stroke="url(#chatGrad)" stroke-width="3"/>
+    <rect x="360" y="160" width="280" height="40" rx="12" fill="url(#chatGrad)"/>
     
-    <!-- Icon: Chat bubbles -->
-    <path d="M380 130 Q370 120 380 110 Q400 105 410 110 Q420 120 410 130 Z" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
-    <path d="M375 130 L380 140" fill="none" stroke="#388e3c" stroke-width="1"/>
-    <path d="M420 130 Q410 120 420 110 Q440 105 450 110 Q460 120 450 130 Z" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
-    <path d="M415 130 L410 140" fill="none" stroke="#388e3c" stroke-width="1"/>
+    <!-- Enhanced Chat Icon -->
+    <g transform="translate(420, 175)">
+      <rect x="-10" y="-6" width="16" height="10" rx="3" fill="white" opacity="0.9"/>
+      <rect x="-6" y="-2" width="16" height="10" rx="3" fill="white" opacity="0.7"/>
+      <circle cx="2" cy="2" r="1.5" fill="url(#chatGrad)"/>
+      <circle cx="6" cy="2" r="1.5" fill="url(#chatGrad)"/>
+      <circle cx="10" cy="2" r="1.5" fill="url(#chatGrad)"/>
+    </g>
     
-    <text x="400" y="170" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#388e3c">AgentChat</text>
+    <text x="500" y="185" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="600" fill="white">AgentChat</text>
     
     <!-- Subcomponents -->
-    <rect x="320" y="190" width="160" height="90" rx="5" ry="5" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
-    <text x="400" y="210" text-anchor="middle" font-family="Arial" font-size="12" fill="#388e3c">Conversation Management</text>
-    <line x1="340" y1="220" x2="460" y2="220" stroke="#388e3c" stroke-width="1" stroke-opacity="0.5"/>
-    <text x="400" y="235" text-anchor="middle" font-family="Arial" font-size="12" fill="#388e3c">Agent Templates</text>
-    <line x1="340" y1="245" x2="460" y2="245" stroke="#388e3c" stroke-width="1" stroke-opacity="0.5"/>
-    <text x="400" y="260" text-anchor="middle" font-family="Arial" font-size="12" fill="#388e3c">Team Orchestration</text>
+    <rect x="370" y="220" width="260" height="90" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+    
+    <circle cx="390" cy="245" r="4" fill="url(#chatGrad)"/>
+    <text x="405" y="250" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Conversation Engine</text>
+    
+    <circle cx="390" cy="270" r="4" fill="url(#chatGrad)"/>
+    <text x="405" y="275" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Team Orchestration</text>
+    
+    <circle cx="390" cy="295" r="4" fill="url(#chatGrad)"/>
+    <text x="405" y="300" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Agent Templates</text>
   </g>
   
   <!-- Extensions Component (Right) -->
-  <g id="extensions-component" filter="url(#shadow)">
-    <rect x="500" y="300" width="200" height="200" rx="10" ry="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <g id="extensions-component" filter="url(#modernShadow)">
+    <rect x="700" y="350" width="250" height="200" rx="20" fill="white" stroke="url(#extensionsGrad)" stroke-width="3"/>
+    <rect x="710" y="360" width="230" height="40" rx="12" fill="url(#extensionsGrad)"/>
     
-    <!-- Icon: Puzzle pieces -->
-    <path d="M590 330 C595 320 605 320 610 330 L610 345 C615 350 615 360 610 365 L595 365 C590 370 580 370 575 365 L575 350 C570 345 570 335 575 330 Z" 
-          fill="#e1bee7" stroke="#7b1fa2" stroke-width="1"/>
+    <!-- Enhanced Extensions Icon -->
+    <g transform="translate(770, 375)">
+      <rect x="-8" y="-8" width="10" height="10" rx="2" fill="white" opacity="0.9"/>
+      <rect x="2" y="-8" width="10" height="10" rx="2" fill="white" opacity="0.7"/>
+      <rect x="-8" y="2" width="10" height="10" rx="2" fill="white" opacity="0.7"/>
+      <rect x="2" y="2" width="10" height="10" rx="2" fill="white" opacity="0.5"/>
+      <path d="M-3,3 L3,-3" stroke="url(#extensionsGrad)" stroke-width="2" stroke-linecap="round"/>
+    </g>
     
-    <text x="600" y="370" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#7b1fa2">Extensions</text>
+    <text x="825" y="385" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="600" fill="white">Extensions</text>
     
     <!-- Subcomponents -->
-    <rect x="520" y="390" width="160" height="90" rx="5" ry="5" fill="#e1bee7" stroke="#7b1fa2" stroke-width="1"/>
-    <text x="600" y="410" text-anchor="middle" font-family="Arial" font-size="12" fill="#7b1fa2">Model Integrations</text>
-    <line x1="540" y1="420" x2="660" y2="420" stroke="#7b1fa2" stroke-width="1" stroke-opacity="0.5"/>
-    <text x="600" y="435" text-anchor="middle" font-family="Arial" font-size="12" fill="#7b1fa2">Tool Connectors</text>
-    <line x1="540" y1="445" x2="660" y2="445" stroke="#7b1fa2" stroke-width="1" stroke-opacity="0.5"/>
-    <text x="600" y="460" text-anchor="middle" font-family="Arial" font-size="12" fill="#7b1fa2">External Services</text>
+    <rect x="720" y="420" width="210" height="110" rx="12" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1"/>
+    
+    <circle cx="740" cy="445" r="4" fill="url(#extensionsGrad)"/>
+    <text x="755" y="450" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Model Integrations</text>
+    
+    <circle cx="740" cy="470" r="4" fill="url(#extensionsGrad)"/>
+    <text x="755" y="475" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Tool Connectors</text>
+    
+    <circle cx="740" cy="495" r="4" fill="url(#extensionsGrad)"/>
+    <text x="755" y="500" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">External APIs</text>
+    
+    <circle cx="740" cy="520" r="4" fill="url(#extensionsGrad)"/>
+    <text x="755" y="525" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Plugin Manager</text>
   </g>
   
   <!-- Studio Component (Left) -->
-  <g id="studio-component" filter="url(#shadow)">
-    <rect x="100" y="300" width="200" height="200" rx="10" ry="10" fill="#e0f7fa" stroke="#0097a7" stroke-width="2"/>
+  <g id="studio-component" filter="url(#modernShadow)">
+    <rect x="50" y="350" width="250" height="200" rx="20" fill="white" stroke="url(#studioGrad)" stroke-width="3"/>
+    <rect x="60" y="360" width="230" height="40" rx="12" fill="url(#studioGrad)"/>
     
-    <!-- Icon: UI window -->
-    <rect x="140" y="320" width="40" height="30" rx="2" ry="2" fill="#b2ebf2" stroke="#0097a7" stroke-width="1"/>
-    <line x1="140" y1="330" x2="180" y2="330" stroke="#0097a7" stroke-width="1"/>
-    <line x1="145" y1="325" x2="148" y2="325" stroke="#0097a7" stroke-width="1"/>
+    <!-- Enhanced Studio Icon -->
+    <g transform="translate(130, 375)">
+      <rect x="-10" y="-6" width="20" height="12" rx="2" fill="white" opacity="0.9" stroke="url(#studioGrad)" stroke-width="1"/>
+      <rect x="-8" y="-4" width="4" height="8" rx="1" fill="url(#studioGrad)"/>
+      <rect x="-2" y="-4" width="4" height="8" rx="1" fill="url(#studioGrad)"/>
+      <rect x="4" y="-4" width="4" height="8" rx="1" fill="url(#studioGrad)"/>
+      <circle cx="-6" cy="-8" r="1" fill="url(#studioGrad)"/>
+      <circle cx="0" cy="-8" r="1" fill="url(#studioGrad)"/>
+      <circle cx="6" cy="-8" r="1" fill="url(#studioGrad)"/>
+    </g>
     
-    <rect x="190" y="320" width="40" height="30" rx="2" ry="2" fill="#b2ebf2" stroke="#0097a7" stroke-width="1"/>
-    <line x1="190" y1="330" x2="230" y2="330" stroke="#0097a7" stroke-width="1"/>
-    <line x1="195" y1="325" x2="198" y2="325" stroke="#0097a7" stroke-width="1"/>
-    
-    <text x="200" y="370" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#0097a7">Studio</text>
+    <text x="175" y="385" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="600" fill="white">Studio</text>
     
     <!-- Subcomponents -->
-    <rect x="120" y="390" width="160" height="90" rx="5" ry="5" fill="#b2ebf2" stroke="#0097a7" stroke-width="1"/>
-    <text x="200" y="410" text-anchor="middle" font-family="Arial" font-size="12" fill="#0097a7">Visual Builder</text>
-    <line x1="140" y1="420" x2="260" y2="420" stroke="#0097a7" stroke-width="1" stroke-opacity="0.5"/>
-    <text x="200" y="435" text-anchor="middle" font-family="Arial" font-size="12" fill="#0097a7">Testing Interface</text>
-    <line x1="140" y1="445" x2="260" y2="445" stroke="#0097a7" stroke-width="1" stroke-opacity="0.5"/>
-    <text x="200" y="460" text-anchor="middle" font-family="Arial" font-size="12" fill="#0097a7">Deployment Tools</text>
+    <rect x="70" y="420" width="210" height="110" rx="12" fill="#f0fdff" stroke="#a5f3fc" stroke-width="1"/>
+    
+    <circle cx="90" cy="445" r="4" fill="url(#studioGrad)"/>
+    <text x="105" y="450" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Visual Builder</text>
+    
+    <circle cx="90" cy="470" r="4" fill="url(#studioGrad)"/>
+    <text x="105" y="475" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Testing Suite</text>
+    
+    <circle cx="90" cy="495" r="4" fill="url(#studioGrad)"/>
+    <text x="105" y="500" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Deployment Pipeline</text>
+    
+    <circle cx="90" cy="520" r="4" fill="url(#studioGrad)"/>
+    <text x="105" y="525" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#374151">Monitoring Dashboard</text>
   </g>
   
-  <!-- Connection arrows -->
+  <!-- Enhanced Connection Arrows -->
   <!-- Core to AgentChat -->
-  <path d="M400 300 L400 200" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  <path d="M500 350 L500 330" stroke="#4b5563" stroke-width="3" fill="none" marker-end="url(#arrowEnd)" marker-start="url(#arrowStart)" opacity="0.8"/>
   
   <!-- Core to Extensions -->
-  <path d="M500 400 L400 400" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  <path d="M650 450 L700 450" stroke="#4b5563" stroke-width="3" fill="none" marker-end="url(#arrowEnd)" marker-start="url(#arrowStart)" opacity="0.8"/>
   
   <!-- Core to Studio -->
-  <path d="M300 400 L200 400" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  <path d="M350 450 L300 450" stroke="#4b5563" stroke-width="3" fill="none" marker-end="url(#arrowEnd)" marker-start="url(#arrowStart)" opacity="0.8"/>
   
   <!-- AgentChat to Extensions -->
-  <path d="M500 200 C550 200 550 300 500 300" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  <path d="M650 240 C700 240 700 300 720 350" stroke="#4b5563" stroke-width="3" fill="none" marker-end="url(#arrowEnd)" marker-start="url(#arrowStart)" opacity="0.8"/>
   
   <!-- Studio to AgentChat -->
-  <path d="M200 200 C150 200 150 300 200 300" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  <path d="M280 350 C280 300 300 240 350 240" stroke="#4b5563" stroke-width="3" fill="none" marker-end="url(#arrowEnd)" marker-start="url(#arrowStart)" opacity="0.8"/>
   
   <!-- Studio to Extensions -->
-  <path d="M200 500 C200 550 600 550 600 500" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  <path d="M175 550 C175 600 825 600 825 550" stroke="#4b5563" stroke-width="3" fill="none" marker-end="url(#arrowEnd)" marker-start="url(#arrowStart)" opacity="0.8"/>
   
-  <!-- Arrow definitions -->
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#424242"/>
-    </marker>
-    <marker id="arrowstart" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="10 0, 0 3.5, 10 7" fill="#424242"/>
-    </marker>
-  </defs>
+  <!-- Enhanced Legend -->
+  <rect x="50" y="750" width="900" height="120" rx="16" fill="white" filter="url(#modernShadow)" opacity="0.95"/>
+  <text x="500" y="780" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#1f2937">Component Overview</text>
   
-  <!-- Legend -->
-  <rect x="100" y="650" width="20" height="20" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="130" y="665" font-family="Arial" font-size="12" fill="#212121">Core Component</text>
-  
-  <rect x="250" y="650" width="20" height="20" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
-  <text x="280" y="665" font-family="Arial" font-size="12" fill="#212121">AgentChat Component</text>
-  
-  <rect x="400" y="650" width="20" height="20" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="430" y="665" font-family="Arial" font-size="12" fill="#212121">Extensions Component</text>
-  
-  <rect x="550" y="650" width="20" height="20" fill="#e0f7fa" stroke="#0097a7" stroke-width="2"/>
-  <text x="580" y="665" font-family="Arial" font-size="12" fill="#212121">Studio Component</text>
-  
-  <line x1="100" y1="680" x2="120" y2="680" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
-  <text x="130" y="685" font-family="Arial" font-size="12" fill="#212121">Bidirectional Data Flow</text>
+  <!-- Legend items in a grid -->
+  <g transform="translate(100, 800)">
+    <rect x="0" y="0" width="16" height="16" rx="4" fill="url(#coreGrad)"/>
+    <text x="25" y="12" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#374151">Core Engine - Central orchestration &amp; state</text>
+    
+    <rect x="250" y="0" width="16" height="16" rx="4" fill="url(#chatGrad)"/>
+    <text x="275" y="12" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#374151">AgentChat - Conversation management</text>
+    
+    <rect x="0" y="25" width="16" height="16" rx="4" fill="url(#extensionsGrad)"/>
+    <text x="25" y="37" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#374151">Extensions - External integrations</text>
+    
+    <rect x="250" y="25" width="16" height="16" rx="4" fill="url(#studioGrad)"/>
+    <text x="275" y="37" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#374151">Studio - Development environment</text>
+    
+    <path d="M500 5 L530 5" stroke="#4b5563" stroke-width="3" marker-end="url(#arrowEnd)" marker-start="url(#arrowStart)"/>
+    <text x="540" y="10" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#374151">Bidirectional data flow</text>
+  </g>
 </svg>
