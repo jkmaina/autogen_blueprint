@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Book Cover](images/02-AutoGen-Mastery.png)](https://www.amazon.com/Complete-AutoGen-Agent-Blueprint-Developers-ebook/dp/B0FFLJT82T)
+[![Book Cover](./images/02-AutoGen-Mastery.png)](https://www.amazon.com/Complete-AutoGen-Agent-Blueprint-Developers-ebook/dp/B0FFLJT82T)
 
 **📚 [Available on Amazon](https://www.amazon.com/Complete-AutoGen-Agent-Blueprint-Developers-ebook/dp/B0FFLJT82T)**
 
