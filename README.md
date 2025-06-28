@@ -25,10 +25,10 @@ AutoGen v0.5 introduces a sophisticated, modular architecture designed for scala
 <div align="center">
 
 ### AutoGen Component Interaction
-![AutoGen Component Interaction](images/chapter2-architecture/component_interaction.svg)
+![AutoGen Component Interaction](./images/chapter2-architecture/component_interaction.svg)
 
 ### Multi-Agent Orchestration Overview
-![Multi-Agent Orchestration](images/chapter7-orchestration/orchestration_overview.svg)
+![Multi-Agent Orchestration](./images/chapter7-orchestration/orchestration_overview.svg)
 
 </div>
 
