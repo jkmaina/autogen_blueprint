@@ -6,7 +6,7 @@
 
 **📚 [Available on Amazon](https://www.amazon.com/Complete-AutoGen-Agent-Blueprint-Developers-ebook/dp/B0FFLJT82T)**
 
-*The definitive guide to building multi-agent AI systems using Microsoft's AutoGen framework version 0.5*
+*The definitive guide to building multi-agent AI systems using Microsoft's AutoGen framework version 0.6.1*
 
 **Author:** James Karanja Maina
 
