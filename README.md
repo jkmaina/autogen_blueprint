@@ -58,9 +58,9 @@ The book is organized into three main parts with additional dedicated chapters:
 - **Chapter 15**: Testing and Evaluation - Quality assurance frameworks
 - **Chapter 16**: Advanced AI Integration - Cutting-edge capabilities and future patterns
 
-## 🆕 New in AutoGen v0.5
+## 🆕 New in AutoGen v0.6.1
 
-AutoGen v0.5 introduces a revolutionary modular architecture with four main components:
+AutoGen v0.6.1 introduces a revolutionary modular architecture with four main components:
 
 | Component | Description | Key Features |
 |-----------|-------------|--------------|
