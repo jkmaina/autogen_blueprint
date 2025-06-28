@@ -1,0 +1,60 @@
+{
+  "benchmark_name": "General Knowledge Benchmark",
+  "description": "A benchmark to evaluate the agent's performance on general knowledge questions.",
+  "tasks": [
+    {
+      "id": "math_1",
+      "description": "What is the square root of 144?",
+      "expected_output": "12"
+    },
+    {
+      "id": "history_1",
+      "description": "Who was the first president of the United States?",
+      "expected_output": "George Washington"
+    },
+    {
+      "id": "science_1",
+      "description": "What is the chemical symbol for gold?",
+      "expected_output": "Au"
+    },
+    {
+      "id": "geography_1",
+      "description": "What is the capital of Japan?",
+      "expected_output": "Tokyo"
+    },
+    {
+      "id": "literature_1",
+      "description": "Who wrote 'Pride and Prejudice'?",
+      "expected_output": "Jane Austen"
+    }
+  ],
+  "results": {
+    "math_1": {
+      "response": "messages=[TextMessage(source='user', models_usage=None, metadata={}, content='What is the square root of 144?', type='TextMessage'), TextMessage(source='benchmarked_assistant', models_usage=RequestUsage(prompt_tokens=34, completion_tokens=10), metadata={}, content='The square root of 144 is 12.', type='TextMessage')] stop_reason=None",
+      "execution_time": 0.8533546924591064,
+      "expected_output": "12"
+    },
+    "history_1": {
+      "response": "messages=[TextMessage(source='user', models_usage=None, metadata={}, content='Who was the first president of the United States?', type='TextMessage'), TextMessage(source='benchmarked_assistant', models_usage=RequestUsage(prompt_tokens=63, completion_tokens=11), metadata={}, content='The first president of the United States was George Washington.', type='TextMessage')] stop_reason=None",
+      "execution_time": 0.7550725936889648,
+      "expected_output": "George Washington"
+    },
+    "science_1": {
+      "response": "messages=[TextMessage(source='user', models_usage=None, metadata={}, content='What is the chemical symbol for gold?', type='TextMessage'), TextMessage(source='benchmarked_assistant', models_usage=RequestUsage(prompt_tokens=91, completion_tokens=8), metadata={}, content='The chemical symbol for gold is Au.', type='TextMessage')] stop_reason=None",
+      "execution_time": 0.5434098243713379,
+      "expected_output": "Au"
+    },
+    "geography_1": {
+      "response": "messages=[TextMessage(source='user', models_usage=None, metadata={}, content='What is the capital of Japan?', type='TextMessage'), TextMessage(source='benchmarked_assistant', models_usage=RequestUsage(prompt_tokens=115, completion_tokens=7), metadata={}, content='The capital of Japan is Tokyo.', type='TextMessage')] stop_reason=None",
+      "execution_time": 0.5159816741943359,
+      "expected_output": "Tokyo"
+    },
+    "literature_1": {
+      "response": "messages=[TextMessage(source='user', models_usage=None, metadata={}, content=\"Who wrote 'Pride and Prejudice'?\", type='TextMessage'), TextMessage(source='benchmarked_assistant', models_usage=RequestUsage(prompt_tokens=140, completion_tokens=13), metadata={}, content=\"'Pride and Prejudice' was written by Jane Austen.\", type='TextMessage')] stop_reason=None",
+      "execution_time": 0.5343954563140869,
+      "expected_output": "Jane Austen"
+    }
+  },
+  "total_time": 3.2025599479675293,
+  "timestamp": 1748762139.2617717
+}

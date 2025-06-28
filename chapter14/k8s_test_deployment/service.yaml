@@ -1,0 +1,12 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: autogen-agent-service
+spec:
+  selector:
+    app: autogen-agent-service
+  ports:
+  - port: 80
+    targetPort: 8000
+  type: ClusterIP

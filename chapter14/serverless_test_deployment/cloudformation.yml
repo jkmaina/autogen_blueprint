@@ -1,0 +1,21 @@
+
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AutoGen Agent Service Infrastructure'
+
+Resources:
+  AgentsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: AutoGenAgents
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: agent_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: agent_id
+          KeyType: HASH
+
+Outputs:
+  AgentsTableName:
+    Description: Name of the DynamoDB table for storing agent configurations
+    Value: !Ref AgentsTable

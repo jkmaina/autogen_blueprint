@@ -1,0 +1,86 @@
+{
+  "task1": {
+    "criteria": {
+      "Accuracy": {
+        "score": 8,
+        "justification": "The response demonstrates accuracy at a level of 8/10."
+      },
+      "Completeness": {
+        "score": 7,
+        "justification": "The response demonstrates completeness at a level of 7/10."
+      },
+      "Relevance": {
+        "score": 9,
+        "justification": "The response demonstrates relevance at a level of 9/10."
+      },
+      "Clarity": {
+        "score": 9,
+        "justification": "The response demonstrates clarity at a level of 9/10."
+      },
+      "Conciseness": {
+        "score": 9,
+        "justification": "The response demonstrates conciseness at a level of 9/10."
+      }
+    },
+    "overall": {
+      "score": 8.4,
+      "summary": "The response achieves an overall score of 8.4/10, indicating a strong performance across the evaluated criteria."
+    }
+  },
+  "task2": {
+    "criteria": {
+      "Accuracy": {
+        "score": 9,
+        "justification": "The response demonstrates accuracy at a level of 9/10."
+      },
+      "Completeness": {
+        "score": 8,
+        "justification": "The response demonstrates completeness at a level of 8/10."
+      },
+      "Relevance": {
+        "score": 8,
+        "justification": "The response demonstrates relevance at a level of 8/10."
+      },
+      "Clarity": {
+        "score": 8,
+        "justification": "The response demonstrates clarity at a level of 8/10."
+      },
+      "Conciseness": {
+        "score": 9,
+        "justification": "The response demonstrates conciseness at a level of 9/10."
+      }
+    },
+    "overall": {
+      "score": 8.4,
+      "summary": "The response achieves an overall score of 8.4/10, indicating a strong performance across the evaluated criteria."
+    }
+  },
+  "task3": {
+    "criteria": {
+      "Accuracy": {
+        "score": 8,
+        "justification": "The response demonstrates accuracy at a level of 8/10."
+      },
+      "Completeness": {
+        "score": 7,
+        "justification": "The response demonstrates completeness at a level of 7/10."
+      },
+      "Relevance": {
+        "score": 9,
+        "justification": "The response demonstrates relevance at a level of 9/10."
+      },
+      "Clarity": {
+        "score": 8,
+        "justification": "The response demonstrates clarity at a level of 8/10."
+      },
+      "Conciseness": {
+        "score": 8,
+        "justification": "The response demonstrates conciseness at a level of 8/10."
+      }
+    },
+    "overall": {
+      "score": 8.0,
+      "summary": "The response achieves an overall score of 8.0/10, indicating a strong performance across the evaluated criteria."
+    }
+  }
+}

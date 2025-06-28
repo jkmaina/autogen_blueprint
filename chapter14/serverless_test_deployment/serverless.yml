@@ -1,0 +1,55 @@
+
+service: autogen-agent-service
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.10
+  region: us-east-1
+  memorySize: 1024
+  timeout: 30
+  environment:
+    OPENAI_API_KEY: ${env:OPENAI_API_KEY}
+  
+  httpApi:
+    cors: true
+
+functions:
+  create_agent:
+    handler: handler.create_agent
+    events:
+      - httpApi:
+          path: /agents
+          method: post
+  
+  delete_agent:
+    handler: handler.delete_agent
+    events:
+      - httpApi:
+          path: /agents/{agent_id}
+          method: delete
+  
+  list_agents:
+    handler: handler.list_agents
+    events:
+      - httpApi:
+          path: /agents
+          method: get
+  
+  run_task:
+    handler: handler.run_task
+    events:
+      - httpApi:
+          path: /tasks
+          method: post
+    timeout: 60
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    slim: true
+    layer: true

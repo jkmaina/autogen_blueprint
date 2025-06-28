@@ -1,0 +1,15 @@
+# AutoGen dependencies
+autogen-core>=0.6.1
+autogen-agentchat>=0.6.1
+autogen-ext>=0.6.1
+autogen-ext[openai]>=0.6.1
+
+# FastAPI and server dependencies
+fastapi>=0.115.13
+uvicorn[standard]>=0.34.3
+
+# Environment and configuration
+python-dotenv>=1.1.1
+
+# Additional utilities
+pydantic>=2.11.6
