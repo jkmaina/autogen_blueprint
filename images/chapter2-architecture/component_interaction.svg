@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="800" fill="white"/>
+  
+  <!-- Drop shadows for components -->
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="3" stdDeviation="5" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#212121">AutoGen Component Interaction</text>
+  
+  <!-- Core Component (Center) -->
+  <g id="core-component" filter="url(#shadow)">
+    <rect x="300" y="300" width="200" height="200" rx="10" ry="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    
+    <!-- Icon: Gears -->
+    <circle cx="400" cy="330" r="20" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+    <path d="M400 320 L400 340 M390 330 L410 330" stroke="#1976d2" stroke-width="2"/>
+    <path d="M393 323 L407 337 M393 337 L407 323" stroke="#1976d2" stroke-width="2"/>
+    
+    <text x="400" y="370" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#1976d2">Core</text>
+    
+    <!-- Subcomponents -->
+    <rect x="320" y="390" width="160" height="90" rx="5" ry="5" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+    <text x="400" y="410" text-anchor="middle" font-family="Arial" font-size="12" fill="#1976d2">Event System</text>
+    <line x1="340" y1="420" x2="460" y2="420" stroke="#1976d2" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="400" y="435" text-anchor="middle" font-family="Arial" font-size="12" fill="#1976d2">Message Handling</text>
+    <line x1="340" y1="445" x2="460" y2="445" stroke="#1976d2" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="400" y="460" text-anchor="middle" font-family="Arial" font-size="12" fill="#1976d2">Agent Registry</text>
+  </g>
+  
+  <!-- AgentChat Component (Top) -->
+  <g id="agentchat-component" filter="url(#shadow)">
+    <rect x="300" y="100" width="200" height="200" rx="10" ry="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
+    
+    <!-- Icon: Chat bubbles -->
+    <path d="M380 130 Q370 120 380 110 Q400 105 410 110 Q420 120 410 130 Z" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+    <path d="M375 130 L380 140" fill="none" stroke="#388e3c" stroke-width="1"/>
+    <path d="M420 130 Q410 120 420 110 Q440 105 450 110 Q460 120 450 130 Z" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+    <path d="M415 130 L410 140" fill="none" stroke="#388e3c" stroke-width="1"/>
+    
+    <text x="400" y="170" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#388e3c">AgentChat</text>
+    
+    <!-- Subcomponents -->
+    <rect x="320" y="190" width="160" height="90" rx="5" ry="5" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+    <text x="400" y="210" text-anchor="middle" font-family="Arial" font-size="12" fill="#388e3c">Conversation Management</text>
+    <line x1="340" y1="220" x2="460" y2="220" stroke="#388e3c" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="400" y="235" text-anchor="middle" font-family="Arial" font-size="12" fill="#388e3c">Agent Templates</text>
+    <line x1="340" y1="245" x2="460" y2="245" stroke="#388e3c" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="400" y="260" text-anchor="middle" font-family="Arial" font-size="12" fill="#388e3c">Team Orchestration</text>
+  </g>
+  
+  <!-- Extensions Component (Right) -->
+  <g id="extensions-component" filter="url(#shadow)">
+    <rect x="500" y="300" width="200" height="200" rx="10" ry="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+    
+    <!-- Icon: Puzzle pieces -->
+    <path d="M590 330 C595 320 605 320 610 330 L610 345 C615 350 615 360 610 365 L595 365 C590 370 580 370 575 365 L575 350 C570 345 570 335 575 330 Z" 
+          fill="#e1bee7" stroke="#7b1fa2" stroke-width="1"/>
+    
+    <text x="600" y="370" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#7b1fa2">Extensions</text>
+    
+    <!-- Subcomponents -->
+    <rect x="520" y="390" width="160" height="90" rx="5" ry="5" fill="#e1bee7" stroke="#7b1fa2" stroke-width="1"/>
+    <text x="600" y="410" text-anchor="middle" font-family="Arial" font-size="12" fill="#7b1fa2">Model Integrations</text>
+    <line x1="540" y1="420" x2="660" y2="420" stroke="#7b1fa2" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="600" y="435" text-anchor="middle" font-family="Arial" font-size="12" fill="#7b1fa2">Tool Connectors</text>
+    <line x1="540" y1="445" x2="660" y2="445" stroke="#7b1fa2" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="600" y="460" text-anchor="middle" font-family="Arial" font-size="12" fill="#7b1fa2">External Services</text>
+  </g>
+  
+  <!-- Studio Component (Left) -->
+  <g id="studio-component" filter="url(#shadow)">
+    <rect x="100" y="300" width="200" height="200" rx="10" ry="10" fill="#e0f7fa" stroke="#0097a7" stroke-width="2"/>
+    
+    <!-- Icon: UI window -->
+    <rect x="140" y="320" width="40" height="30" rx="2" ry="2" fill="#b2ebf2" stroke="#0097a7" stroke-width="1"/>
+    <line x1="140" y1="330" x2="180" y2="330" stroke="#0097a7" stroke-width="1"/>
+    <line x1="145" y1="325" x2="148" y2="325" stroke="#0097a7" stroke-width="1"/>
+    
+    <rect x="190" y="320" width="40" height="30" rx="2" ry="2" fill="#b2ebf2" stroke="#0097a7" stroke-width="1"/>
+    <line x1="190" y1="330" x2="230" y2="330" stroke="#0097a7" stroke-width="1"/>
+    <line x1="195" y1="325" x2="198" y2="325" stroke="#0097a7" stroke-width="1"/>
+    
+    <text x="200" y="370" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#0097a7">Studio</text>
+    
+    <!-- Subcomponents -->
+    <rect x="120" y="390" width="160" height="90" rx="5" ry="5" fill="#b2ebf2" stroke="#0097a7" stroke-width="1"/>
+    <text x="200" y="410" text-anchor="middle" font-family="Arial" font-size="12" fill="#0097a7">Visual Builder</text>
+    <line x1="140" y1="420" x2="260" y2="420" stroke="#0097a7" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="200" y="435" text-anchor="middle" font-family="Arial" font-size="12" fill="#0097a7">Testing Interface</text>
+    <line x1="140" y1="445" x2="260" y2="445" stroke="#0097a7" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="200" y="460" text-anchor="middle" font-family="Arial" font-size="12" fill="#0097a7">Deployment Tools</text>
+  </g>
+  
+  <!-- Connection arrows -->
+  <!-- Core to AgentChat -->
+  <path d="M400 300 L400 200" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  
+  <!-- Core to Extensions -->
+  <path d="M500 400 L400 400" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  
+  <!-- Core to Studio -->
+  <path d="M300 400 L200 400" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  
+  <!-- AgentChat to Extensions -->
+  <path d="M500 200 C550 200 550 300 500 300" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  
+  <!-- Studio to AgentChat -->
+  <path d="M200 200 C150 200 150 300 200 300" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  
+  <!-- Studio to Extensions -->
+  <path d="M200 500 C200 550 600 550 600 500" stroke="#424242" stroke-width="2" fill="none" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  
+  <!-- Arrow definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#424242"/>
+    </marker>
+    <marker id="arrowstart" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#424242"/>
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <rect x="100" y="650" width="20" height="20" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="130" y="665" font-family="Arial" font-size="12" fill="#212121">Core Component</text>
+  
+  <rect x="250" y="650" width="20" height="20" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
+  <text x="280" y="665" font-family="Arial" font-size="12" fill="#212121">AgentChat Component</text>
+  
+  <rect x="400" y="650" width="20" height="20" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="430" y="665" font-family="Arial" font-size="12" fill="#212121">Extensions Component</text>
+  
+  <rect x="550" y="650" width="20" height="20" fill="#e0f7fa" stroke="#0097a7" stroke-width="2"/>
+  <text x="580" y="665" font-family="Arial" font-size="12" fill="#212121">Studio Component</text>
+  
+  <line x1="100" y1="680" x2="120" y2="680" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" marker-start="url(#arrowstart)"/>
+  <text x="130" y="685" font-family="Arial" font-size="12" fill="#212121">Bidirectional Data Flow</text>
+</svg>

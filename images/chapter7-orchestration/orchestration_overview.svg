@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="500" fill="white"/>
+  
+  <!-- Title -->
+  <text x="450" y="50" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#212121">Multi-Agent Orchestration in AutoGen v0.5</text>
+  
+  <!-- Central Orchestrator -->
+  <g id="orchestrator">
+    <circle cx="450" cy="250" r="70" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="450" y="240" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1976d2">Orchestrator</text>
+    <text x="450" y="265" text-anchor="middle" font-family="Arial" font-size="14" fill="#1976d2">Coordination Logic</text>
+    
+    <!-- Orchestrator icon -->
+    <circle cx="450" cy="210" r="15" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+    <path d="M445 205 L455 215 M445 215 L455 205" stroke="#1976d2" stroke-width="1.5"/>
+    <path d="M440 210 L460 210" stroke="#1976d2" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Orchestration Approaches -->
+  <!-- Team-Based Orchestration -->
+  <g id="team-based">
+    <rect x="150" y="100" width="200" height="100" rx="10" ry="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
+    <text x="250" y="135" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#388e3c">Team-Based</text>
+    <text x="250" y="160" text-anchor="middle" font-family="Arial" font-size="14" fill="#388e3c">Orchestration</text>
+    
+    <!-- Icon: Team -->
+    <circle cx="190" cy="135" r="10" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+    <circle cx="210" cy="135" r="10" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+    <circle cx="200" cy="155" r="10" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+    <line x1="190" y1="135" x2="210" y2="135" stroke="#388e3c" stroke-width="1"/>
+    <line x1="190" y1="135" x2="200" y2="155" stroke="#388e3c" stroke-width="1"/>
+    <line x1="210" y1="135" x2="200" y2="155" stroke="#388e3c" stroke-width="1"/>
+  </g>
+  
+  <!-- Event-Driven Orchestration -->
+  <g id="event-driven">
+    <rect x="550" y="100" width="200" height="100" rx="10" ry="10" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
+    <text x="650" y="135" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#0288d1">Event-Driven</text>
+    <text x="650" y="160" text-anchor="middle" font-family="Arial" font-size="14" fill="#0288d1">Orchestration</text>
+    
+    <!-- Icon: Events -->
+    <rect x="610" y="135" width="20" height="15" rx="2" ry="2" fill="#b3e5fc" stroke="#0288d1" stroke-width="1"/>
+    <path d="M610 142 L630 142" stroke="#0288d1" stroke-width="1"/>
+    <path d="M615 135 L615 150" stroke="#0288d1" stroke-width="1"/>
+    <path d="M620 135 L620 150" stroke="#0288d1" stroke-width="1"/>
+    <path d="M625 135 L625 150" stroke="#0288d1" stroke-width="1"/>
+  </g>
+  
+  <!-- Hybrid Orchestration -->
+  <g id="hybrid">
+    <rect x="350" y="400" width="200" height="80" rx="10" ry="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+    <text x="450" y="435" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#7b1fa2">Hybrid Orchestration</text>
+    <text x="450" y="455" text-anchor="middle" font-family="Arial" font-size="14" fill="#7b1fa2">Combined Approaches</text>
+  </g>
+  
+  <!-- Team-Based Components -->
+  <g id="team-components">
+    <rect x="50" y="250" width="120" height="40" rx="5" ry="5" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="110" y="275" text-anchor="middle" font-family="Arial" font-size="12" fill="#388e3c">RoundRobinGroupChat</text>
+    
+    <rect x="50" y="300" width="120" height="40" rx="5" ry="5" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="110" y="325" text-anchor="middle" font-family="Arial" font-size="12" fill="#388e3c">SelectorGroupChat</text>
+    
+    <rect x="180" y="250" width="120" height="40" rx="5" ry="5" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="240" y="275" text-anchor="middle" font-family="Arial" font-size="12" fill="#388e3c">Swarm</text>
+    
+    <rect x="180" y="300" width="120" height="40" rx="5" ry="5" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="240" y="325" text-anchor="middle" font-family="Arial" font-size="12" fill="#388e3c">GraphFlow</text>
+  </g>
+  
+  <!-- Event-Driven Components -->
+  <g id="event-components">
+    <rect x="600" y="250" width="120" height="40" rx="5" ry="5" fill="#b3e5fc" stroke="#0288d1" stroke-width="1.5"/>
+    <text x="660" y="275" text-anchor="middle" font-family="Arial" font-size="12" fill="#0288d1">Message Handlers</text>
+    
+    <rect x="600" y="300" width="120" height="40" rx="5" ry="5" fill="#b3e5fc" stroke="#0288d1" stroke-width="1.5"/>
+    <text x="660" y="325" text-anchor="middle" font-family="Arial" font-size="12" fill="#0288d1">Topics</text>
+    
+    <rect x="730" y="250" width="120" height="40" rx="5" ry="5" fill="#b3e5fc" stroke="#0288d1" stroke-width="1.5"/>
+    <text x="790" y="275" text-anchor="middle" font-family="Arial" font-size="12" fill="#0288d1">Publish-Subscribe</text>
+    
+    <rect x="730" y="300" width="120" height="40" rx="5" ry="5" fill="#b3e5fc" stroke="#0288d1" stroke-width="1.5"/>
+    <text x="790" y="325" text-anchor="middle" font-family="Arial" font-size="12" fill="#0288d1">Custom Messages</text>
+  </g>
+  
+  <!-- Connection lines -->
+  <g id="connections">
+    <!-- Team-Based to Orchestrator -->
+    <path d="M 250 200 Q 300 250 380 250" stroke="#388e3c" stroke-width="2" fill="none" marker-end="url(#green-arrow)"/>
+    
+    <!-- Event-Driven to Orchestrator -->
+    <path d="M 650 200 Q 600 250 520 250" stroke="#0288d1" stroke-width="2" fill="none" marker-end="url(#blue-arrow)"/>
+    
+    <!-- Orchestrator to Hybrid -->
+    <path d="M 450 320 L 450 400" stroke="#7b1fa2" stroke-width="2" fill="none" marker-end="url(#purple-arrow)"/>
+    
+    <!-- Team components to Team-Based -->
+    <path d="M 110 250 L 110 210 Q 110 200 120 200 L 150 200" stroke="#388e3c" stroke-width="1.5" fill="none" marker-end="url(#green-arrow)"/>
+    <path d="M 110 300 L 110 210 Q 110 200 120 200 L 150 200" stroke="#388e3c" stroke-width="1.5" fill="none" marker-end="url(#green-arrow)"/>
+    <path d="M 240 250 L 240 210 Q 240 200 230 200 L 200 200" stroke="#388e3c" stroke-width="1.5" fill="none" marker-end="url(#green-arrow)"/>
+    <path d="M 240 300 L 240 210 Q 240 200 230 200 L 200 200" stroke="#388e3c" stroke-width="1.5" fill="none" marker-end="url(#green-arrow)"/>
+    
+    <!-- Event components to Event-Driven -->
+    <path d="M 660 250 L 660 210 Q 660 200 650 200 L 600 200" stroke="#0288d1" stroke-width="1.5" fill="none" marker-end="url(#blue-arrow)"/>
+    <path d="M 660 300 L 660 210 Q 660 200 650 200 L 600 200" stroke="#0288d1" stroke-width="1.5" fill="none" marker-end="url(#blue-arrow)"/>
+    <path d="M 790 250 L 790 210 Q 790 200 780 200 L 750 200" stroke="#0288d1" stroke-width="1.5" fill="none" marker-end="url(#blue-arrow)"/>
+    <path d="M 790 300 L 790 210 Q 790 200 780 200 L 750 200" stroke="#0288d1" stroke-width="1.5" fill="none" marker-end="url(#blue-arrow)"/>
+  </g>
+  
+  <!-- Benefits Box -->
+  <rect x="50" y="350" width="250" height="130" rx="5" ry="5" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="175" y="370" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#212121">Why Orchestration Matters</text>
+  <text x="60" y="390" font-family="Arial" font-size="12" fill="#616161">• Complexity Management</text>
+  <text x="60" y="410" font-family="Arial" font-size="12" fill="#616161">• Resource Efficiency</text>
+  <text x="60" y="430" font-family="Arial" font-size="12" fill="#616161">• Goal Alignment</text>
+  <text x="60" y="450" font-family="Arial" font-size="12" fill="#616161">• Error Handling</text>
+  <text x="60" y="470" font-family="Arial" font-size="12" fill="#616161">• Adaptability</text>
+  
+  <!-- Arrow definitions -->
+  <defs>
+    <marker id="green-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#388e3c"/>
+    </marker>
+    <marker id="blue-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0288d1"/>
+    </marker>
+    <marker id="purple-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7b1fa2"/>
+    </marker>
+  </defs>
+</svg>
